@@ -54,3 +54,8 @@
 ## Associations (Important)
 - **Public subnet → Public route table** (route to IGW).
 - **Private subnet → Private route table** (no IGW route).
+
+---
+**Author**: Habibullah Jubair  
+**Email**: hmjubair12@gmail.com  
+**Last Modified**: February 9, 2026
