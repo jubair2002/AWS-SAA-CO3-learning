@@ -12,6 +12,26 @@
 - **CIDR Range**: IP address block that defines the size of a network.
   - Example: `10.0.0.0/16` gives 65,536 IPs.
 
+## CIDR and Basic Networking (Quick Math)
+- **CIDR format**: `IP/prefix` where prefix is number of network bits.
+  - Example: `10.0.0.0/16` means first 16 bits are network, remaining 16 bits are host.
+- **Total IPs**: `2^(32 - prefix)` for IPv4.
+  - Example: `/24` → `2^(32-24) = 256` IPs.
+- **Usable IPs in AWS**: Total minus 5 reserved by AWS.
+  - Example: `/24` → 256 total, 251 usable.
+- **Common sizes**:
+  - `/16` → 65,536 total (65,531 usable)
+  - `/20` → 4,096 total (4,091 usable)
+  - `/24` → 256 total (251 usable)
+- **Subnetting example**: Split `10.0.0.0/16` into four `/18` subnets.
+  - `10.0.0.0/18`
+  - `10.0.64.0/18`
+  - `10.0.128.0/18`
+  - `10.0.192.0/18`
+- **Public/private split example**:
+  - Public: `10.0.1.0/24`, `10.0.2.0/24`
+  - Private: `10.0.101.0/24`, `10.0.102.0/24`
+
 ## Subnets
 - **Subnet**: A smaller network inside a VPC. Each subnet lives in one AZ.
   - Example: Split `10.0.0.0/16` into:
