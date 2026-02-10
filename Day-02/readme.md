@@ -43,6 +43,14 @@ Last modified: 10 Feb 2026
 - **Public Subnet**: Has a route to the Internet via an Internet Gateway.
 - **Private Subnet**: No direct route to the Internet.
 
+## Why Public vs Private Subnet (Not Just a Name)
+- **Public subnet**: Route table includes `0.0.0.0/0 -> IGW`. Instances can be reachable from the internet if they have a public IP and security group allows.
+- **Private subnet**: No IGW route in its route table. Instances are not directly reachable from the internet.
+- **Why we need both**:
+  - **Public** for web servers, bastion hosts, load balancers.
+  - **Private** for databases, internal services, backend systems.
+  - **Outbound only** for private subnets is done via a NAT Gateway in a public subnet.
+
 ## Route Tables
 - **Route Table**: Controls where network traffic is directed.
   - Example public route table:
@@ -75,8 +83,3 @@ Last modified: 10 Feb 2026
 ## Associations (Important)
 - **Public subnet → Public route table** (route to IGW).
 - **Private subnet → Private route table** (no IGW route).
-
----
-**Author**: Habibullah Jubair  
-**Email**: hmjubair12@gmail.com  
-**Last Modified**: February 9, 2026
