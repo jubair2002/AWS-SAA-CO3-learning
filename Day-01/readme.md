@@ -1,4 +1,5 @@
 # Day 01 — Cloud Basics
+Last modified: 10 Feb 2026
 
 ## What Is Cloud Computing
 Cloud computing means renting IT resources (servers, storage, databases, networking, software) over the internet instead of owning physical hardware.
