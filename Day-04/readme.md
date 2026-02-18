@@ -1,6 +1,6 @@
 # Day 04 - VPC Peering
 
-Last modified: 19 Feb 2026
+Last modified: 18 Feb 2026
 
 ## What is VPC Peering?
 VPC Peering is a **private network connection** between two VPCs.  
@@ -9,6 +9,11 @@ It allows resources in one VPC to communicate with resources in another VPC usin
 - Traffic stays on the AWS backbone network (not public internet)
 - Communication is direct between peered VPCs
 - It works across same account, different accounts, and even different regions (inter-region peering)
+
+### Basics of VPC Peering
+The image below shows the basic flow of communication between two peered VPCs.
+
+![Basic VPC Peering Flow](./vpcpeering.jpg)
 
 ---
 
