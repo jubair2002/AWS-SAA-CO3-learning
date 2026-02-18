@@ -1,5 +1,5 @@
 # Day 02 — AWS SAA-C03 Notes
-Last modified: 10 Feb 2026
+Last modified: 18 Feb 2026
 
 ## Regions and AZs
 - **Region**: A geographic area that contains multiple Availability Zones. Choose based on latency, cost, and compliance.
