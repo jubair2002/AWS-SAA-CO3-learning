@@ -1,5 +1,5 @@
 # Day 01 — Cloud Basics
-Last modified: 10 Feb 2026
+Last modified: 19 Feb 2026
 
 ## What Is Cloud Computing
 Cloud computing means renting IT resources (servers, storage, databases, networking, software) over the internet instead of owning physical hardware.
@@ -38,6 +38,11 @@ These three are essential characteristics of cloud services:
 - **AWS** (Amazon Web Services)
 - **Microsoft Azure**
 - **Google Cloud Platform (GCP)**
+
+## Cloud Comparison Cheat Sheet
+This chart gives a quick side-by-side view of major cloud providers and helps map similar services across platforms.
+
+![Cloud Comparison Cheat Sheet](cloud-comparison-cheat-sheet.png)
 
 ## Quick Summary
 Cloud lets you rent compute, storage, and networking on demand. AWS is a market leader with broad services and global coverage.
