@@ -1,5 +1,5 @@
 # Day 01 — Cloud Basics
-Last modified: 21 Feb 2026
+Last modified: 18 Mar 2026
 
 ## What Is Cloud Computing
 Cloud computing means renting IT resources (servers, storage, databases, networking, software) over the internet instead of owning physical hardware.
@@ -92,8 +92,14 @@ These three are essential characteristics of cloud services:
 - Strong ecosystem, documentation, and community.
 - Mature security and compliance options.
 
+## Regions and Availability Zones (AZs)
+- **Region**: A geographic area that contains multiple Availability Zones. Choose based on latency, cost, and compliance.
+  - Example: `us-east-1` (N. Virginia).
+- **Availability Zone (AZ)**: One or more data centers within a Region. AZs are isolated but connected by low‑latency links.
+  - Example: `us-east-1a`, `us-east-1b`.
+
 ## Cloud Service Models
-- ![Types of Cloud Services](types-of-cloud-service.png)
+- ![Types of Cloud Services](images/Day-01/types-of-cloud-service.png)
 - **IaaS (Infrastructure as a Service)**: You manage OS, apps, and data; provider manages hardware.
   - Example: AWS EC2.
 - **PaaS (Platform as a Service)**: Provider manages OS and runtime; you deploy code.
@@ -109,7 +115,7 @@ These three are essential characteristics of cloud services:
 ## Cloud Comparison Cheat Sheet
 This chart gives a quick side-by-side view of major cloud providers and helps map similar services across platforms.
 
-![Cloud Comparison Cheat Sheet](cloud-comparison-cheat-sheet.png)
+![Cloud Comparison Cheat Sheet](images/Day-01/cloud-comparison-cheat-sheet.png)
 
 ## Quick Summary
 Cloud lets you rent compute, storage, and networking on demand. AWS is a market leader with broad services and global coverage.

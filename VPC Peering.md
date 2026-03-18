@@ -1,6 +1,6 @@
 # Day 04 - VPC Peering
 
-Last modified: 18 Feb 2026
+Last modified: 18 Mar 2026
 
 ## What is VPC Peering?
 VPC Peering is a **private network connection** between two VPCs.  
@@ -13,7 +13,7 @@ It allows resources in one VPC to communicate with resources in another VPC usin
 ### Basics of VPC Peering
 The image below shows the basic flow of communication between two peered VPCs.
 
-![Basic VPC Peering Flow](./vpcpeering.jpg)
+![Basic VPC Peering Flow](images/Day-04/vpcpeering.jpg)
 
 ---
 
@@ -54,11 +54,11 @@ After these are done, EC2 instances in both VPCs can communicate privately.
   - Accepter VPC: `VPC-B`
 - Create request
 
-![Create Peering](./peering-connection-create.png)
+![Create Peering](images/Day-04/peering-connection-create.png)
 
 Request will show status as pending acceptance:
 
-![Pending Accept](./waiting-for-accept.png)
+![Pending Accept](images/Day-04/waiting-for-accept.png)
 
 ---
 
@@ -67,7 +67,7 @@ Request will show status as pending acceptance:
 - Click **Accept request**
 - Status should become **Active**
 
-![Accept Peering](./accept-peering-cnnections.png)
+![Accept Peering](images/Day-04/accept-peering-cnnections.png)
 
 ---
 
@@ -78,13 +78,13 @@ Now both VPC route tables must know how to reach each other.
   - Destination: `CIDR of VPC-B`
   - Target: `Peering Connection (pcx-xxxx)`
 
-![Route Table VPC-A](./routetable-entry-vpcA.png)
+![Route Table VPC-A](images/Day-04/routetable-entry-vpcA.png)
 
 - In **VPC-B route table**:
   - Destination: `CIDR of VPC-A`
   - Target: `Peering Connection (pcx-xxxx)`
 
-![Route Table VPC-B](./routetatble-entryvpcB.png)
+![Route Table VPC-B](images/Day-04/routetatble-entryvpcB.png)
 
 ---
 
@@ -95,7 +95,7 @@ Even if peering + routes are correct, SG can still block traffic.
 - On EC2 in VPC-B SG: allow inbound from VPC-A CIDR (or specific SG/IP)
 - For test, allow ICMP (ping) between both private IP ranges
 
-![SG Rule Update](./sg-rule-update.png)
+![SG Rule Update](images/Day-04/sg-rule-update.png)
 
 ---
 
@@ -105,9 +105,9 @@ After 4 steps, test connectivity:
 - Ping from EC2 in VPC-A to private IP of EC2 in VPC-B
 - Ping from EC2 in VPC-B to private IP of EC2 in VPC-A
 
-![Ping from VPC-A](./ping-from-server1-invpcA.png)
+![Ping from VPC-A](images/Day-04/ping-from-server1-invpcA.png)
 
-![Ping from VPC-B](./ping-from-server1-invpcb.png)
+![Ping from VPC-B](images/Day-04/ping-from-server1-invpcb.png)
 
 If ping fails, check in this order:
 1. Peering status is Active

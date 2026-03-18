@@ -1,6 +1,6 @@
 # Day 06 - All About EBS Volume, Performance Metrics, and Types
 
-Last modified: 25 Feb 2026
+Last modified: 18 Mar 2026
 
 Amazon EBS (Elastic Block Store) is network-attached, persistent block storage.  
 An EBS volume behaves like a virtual hard disk that you can attach to an EC2 instance over the AWS network.
@@ -14,41 +14,41 @@ An EBS volume behaves like a virtual hard disk that you can attach to an EC2 ins
 When you launch an EC2 instance, AWS automatically creates the root EBS volume (OS disk).  
 After that, you can create additional EBS volumes and attach them to the instance.
 
-![After EC2 creation - volume](./after%20create%20ec2%20.volume.png)
+![After EC2 creation - volume](images/Day-06/after%20create%20ec2%20.volume.png)
 
 ## Create a New EBS Volume
 Create a volume by selecting size, type, and AZ.  
 The volume must be in the same AZ as the target EC2 instance for attachment.
 
-![Create volume](./create%20volume.png)
+![Create volume](images/Day-06/create%20volume.png)
 
 ## Attach Additional Volumes
 You can attach one or more newly created volumes to the EC2 instance as additional block devices.
 
-![Attach newly created volumes with EC2](./attached%202%20newly%20create%20vlume%20with%20ec2%20attach.png)
+![Attach newly created volumes with EC2](images/Day-06/attached%202%20newly%20create%20vlume%20with%20ec2%20attach.png)
 
 ## Verify Volumes in the Instance
 After attachment, log in to the server and verify that new block devices are visible in the OS.  
 Here, `nvme0n1p1` is the OS disk and `nvme1n1` is an additional 5 GB disk.
 
-![Check 2 volumes from Ubuntu server](./check%202%20volume%20from%20ubuntuserver.png)
+![Check 2 volumes from Ubuntu server](images/Day-06/check%202%20volume%20from%20ubuntuserver.png)
 
 ## Create EBS Snapshots
 Snapshots are point-in-time backups of EBS volumes.  
 They are used for backup, restore, and migration.
 
-![Create snapshot](./create%20snapshot.png)
+![Create snapshot](images/Day-06/create%20snapshot.png)
 
 ## Create Volume from Snapshot
 You can create a new EBS volume from an existing snapshot and use it to recover or clone data.
 
-![From snapshot created EBS](./from%20ebs%20snapshort%20created.png)
+![From snapshot created EBS](images/Day-06/from%20ebs%20snapshort%20created.png)
 
 ## Restore to Another Availability Zone
 Here you can see two EBS volumes created from snapshots.  
 From a snapshot, you can create an EBS volume in a different AZ and attach it to an EC2 instance.
 
-![From snapshot create EBS in another AZ](./from%20snapshot%20create%20ebs%20anohter%20avaaiability%20zone.png)
+![From snapshot create EBS in another AZ](images/Day-06/from%20snapshot%20create%20ebs%20anohter%20avaaiability%20zone.png)
 
 ## Performance Metrics in Storage Devices
 
@@ -70,12 +70,12 @@ In short:
 
 ## EBS Volume Types
 
-![Volume type](./volume%20tpe.png)
+![Volume type](images/Day-06/volume%20tpe.png)
 
 AWS EBS volumes are broadly grouped into two families: `SSD` and `HDD`.
 
 ## SSD Volume Types (2 Types)
-![SSD types details](./ssd%20types%20details.png)
+![SSD types details](images/Day-06/ssd%20types%20details.png)
 
 ### 1) General Purpose SSD (`gp3` / `gp2`)
 - Balanced price and performance.
@@ -89,7 +89,7 @@ AWS EBS volumes are broadly grouped into two families: `SSD` and `HDD`.
 - You provision performance to meet strict requirements.
 
 ## HDD Volume Types (2 Types)
-![HDD type details](./hdd%20type%20details.png)
+![HDD type details](images/Day-06/hdd%20type%20details.png)
 
 ### 1) Throughput Optimized HDD (`st1`)
 - Low-cost HDD for frequently accessed, throughput-heavy workloads.
