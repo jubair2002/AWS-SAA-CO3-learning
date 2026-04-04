@@ -1,4 +1,4 @@
-# Day 01 — Cloud Basics
+# Cloud Basics
 Last modified: 18 Mar 2026
 
 ## What Is Cloud Computing

@@ -1,5 +1,4 @@
-# Day 08 - S3 (Simple Storage Service)
-
+# S3 (Simple Storage Service)
 Last modified: 07 Mar 2026
 
 ## What is Amazon S3?

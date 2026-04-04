@@ -1,5 +1,4 @@
-# Day 05 - EC2 Instance Purchase Options
-
+# EC2 Instance Purchase Options
 Last modified: 18 Mar 2026
 
 Amazon EC2 offers a variety of pricing models for different needs. These models allow users to optimize costs based on workload, budget, and usage patterns.

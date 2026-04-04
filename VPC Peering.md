@@ -1,5 +1,4 @@
-# Day 04 - VPC Peering
-
+# VPC Peering
 Last modified: 18 Mar 2026
 
 ## What is VPC Peering?

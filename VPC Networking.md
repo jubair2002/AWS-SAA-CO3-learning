@@ -1,4 +1,4 @@
-# Day 03 — VPC & Networking
+# VPC & Networking
 Last modified: 18 Mar 2026
 
 ## Topics Covered
